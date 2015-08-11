@@ -115,7 +115,7 @@ function sc_draw_calendar( $month, $year ){
 				$evt_month 	== $month &&
 				$evt_year 	== $year
 			) {
-				$cal_event .= '<a href="'. get_permalink($id) .'">'. get_the_title($id) .'</a><br/>';
+				$cal_event .= '<a href="'. get_permalink($id) .'"><table><tr><td>' . (( '12:00 am' === sc_get_event_start_time($id)) ? '****task****' : sc_get_event_start_time($id) ) . ' ' . get_the_title($id) .'</td></tr></table></a><br/>';
 			}
 
 		endforeach;
